@@ -1,6 +1,13 @@
 #Sử dụng đệ quy
 #----------------------------------------------------------------------------------------------------------
+#Tìm số bé nhất trong 1 dãy số
+def minimum(l, val):
+  if not l[1:]:
+     return val
+  return minimum(l[1:], l[0] if l[0] < val else val)
 
+l = [34, 23, 12, 4, 5]
+print(minimum(l, l[0]))
 #Tính giai thừa của 1 số nhập bởi người dùng
 def giaithua(n):
     if n == 1:
